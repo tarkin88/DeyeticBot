@@ -55,11 +55,12 @@ def echo(bot):
             # chat_id is required to reply any message
             chat_id = update.message.chat_id
             sender = update.message.from_user #['from']['first_name']
-            print(sender.first_name)
             # message = update.message.text.encode('utf-8')
        
             message = "Deja de estar mamando, " + sender.first_name
-            print(type(message))
+            print('sender:' + sender.first_name)
+            print('incomming message:' + update.message.text)
+            print('-'*80)
 
             if (message):
                 # Reply the message
