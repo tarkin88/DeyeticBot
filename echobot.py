@@ -58,8 +58,11 @@ def echo(bot):
             # message = update.message.text.encode('utf-8')
        
             message = "Deja de estar mamando, " + sender.first_name
-            print('sender:' + sender.first_name)
-            print('incomming message:' + update.message.text)
+            if sender.id == 13872946:
+                message = "Sacate por ahi Eder, deja de andar cagando el palo!"
+            print('sender: ' + sender.first_name)
+            print('sender id: ' + str(sender.id))
+            print('incomming message: ' + update.message.text)
             print('-'*80)
 
             if (message):
