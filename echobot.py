@@ -20,6 +20,7 @@
 import logging
 import telegram
 import time
+import random
 
 
 LAST_UPDATE_ID = None
@@ -56,13 +57,27 @@ def echo(bot):
             chat_id = update.message.chat_id
             sender = update.message.from_user #['from']['first_name']
             # message = update.message.text.encode('utf-8')
+
+
+            messages = (
+                'Deja de estar mamando, %s',
+                'Sacate por ahi, %s',
+                'Come caca, %s',
+                'Deja de joder, %s',
+                'Que chingados quieres, %s',
+                'Como castras, %s',
+                'Alguien aplaudale a %s, por favor',
+                'A veces dices cosas chidas, a veces la cagas, %s',
+                'Tu madre no se sentiría muy orgullosa de escuchar esto, %s'
+            )
        
-            message = "Deja de estar mamando, " + sender.first_name
+            message = random.choice(messages) % sender.first_name
             if sender.id == 13872946:
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
             print('sender: ' + sender.first_name)
             print('sender id: ' + str(sender.id))
             print('incomming message: ' + update.message.text)
+            print('outcoming message: ' + message)
             print('-'*80)
 
             if (message):
