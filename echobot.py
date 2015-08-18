@@ -22,6 +22,7 @@ import logging
 import telegram
 import time
 import random
+import settings
 
 
 LAST_UPDATE_ID = None
@@ -34,7 +35,7 @@ def main():
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     # Telegram Bot Authorization Token
-    bot = telegram.Bot('57983814:AAFLTwqiXUmXuKbOdntR_cMAGmtxgqxtvnM')
+    bot = telegram.Bot(settings.TOKEN)
 
     # This will be our global variable to keep the latest update_id when requesting
     # for updates. It starts with the latest update_id if available.
