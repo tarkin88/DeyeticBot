@@ -70,6 +70,7 @@ def echo(bot):
                 'Como castras, %s',
                 'Alguien aplaudale a %s, por favor',
                 'A veces dices cosas chidas, a veces la cagas, %s',
+                'Eres culeroon %s',
                 'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
                 '%s, eres una pobre persona falta de amor...',
                 '%s, puedes irte muy lejos, alla por donde da la vuelta el viento'
