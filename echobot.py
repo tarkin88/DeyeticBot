@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- encoding: utf-8 -*-
 #
 # Simple Bot to reply Telegram messages
 # Copyright (C) 2015 Leandro Toledo de Souza <leandrotoeldodesouza@gmail.com>
@@ -64,11 +65,13 @@ def echo(bot):
                 'Sacate por ahi, %s',
                 'Come caca, %s',
                 'Deja de joder, %s',
-                'Que chingados quieres, %s',
+                'Que chingados quieres, %s?',
                 'Como castras, %s',
                 'Alguien aplaudale a %s, por favor',
                 'A veces dices cosas chidas, a veces la cagas, %s',
-                'Tu madre no se sentiría muy orgullosa de escuchar esto, %s'
+                'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
+                '%s, eres un pobre niño sin amor...',
+                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento'
             )
        
             message = random.choice(messages) % sender.first_name
